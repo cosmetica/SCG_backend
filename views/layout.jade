@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href="/stylesheets/style.css")
+    link(rel="stylesheet", href="/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    script(type="text/javascript", src="/jQuery/jquery.min.js")
+    script(type="text/javascript", src="/js/bootstrap.min.js")
+    
+  body
+    div.navbar-wrapper
+      nav.navbar.navbar-default( role="navigation" )
+      .navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+        a.navbar-brand(href="#") SCG mini project
+ 
+    #navbar-inverse.collapse.navbar-collapse
+        ul.nav.navbar-nav
+            li.active: a( href="#") Home
+            li: a( href="#about" ) About
+            li: a( href="#contact" ) Contact
+            li.dropdown
+                a.dropdown-toggle( href="#", data-toggle="dropdown", role="button", aria-expanded="false" ) Dropdown 
+                    span.caret
+                ul.dropdown-menu( role="menu" )
+                    li: a( href="#" ) Action
+                    li: a( href="#" ) Another action
+                    li: a( href="#" ) Something else here
+                    li.divider
+                    li.dropdown-header Nav header
+                    li: a( href="#" ) Separated link
+                    li: a( href="#" ) One more separated link
+    #main
+      block content
+  footer.footer.bg-dark
+    div.container 
+      span.text-muted Author by Pakkaphon P. &copy;2019
